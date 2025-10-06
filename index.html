@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.3/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      <!-- Router 3D Model -->
+      <a-entity 
+        gltf-model="url(router_model.glb)"
+        scale="0.5 0.5 0.5"
+        position="0 0 0">
+      </a-entity>
+
+      <!-- Hotspot for LED -->
+      <a-sphere position="0 0.5 0" color="green" radius="0.05">
+        <a-text value="Check LED Status" color="#FFFFFF" position="0 0.1 0"></a-text>
+      </a-sphere>
+    </a-scene>
+  </body>
+</html>
